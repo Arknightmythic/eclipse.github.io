@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Roboto:wght@100&display=swap');
+
+
+*, html, body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: aliceblue;
+}
+
+.fcontainer{
+    justify-content: center;
+    
+    width: 100%;
+    height: 100vh;
+    background-color: lightslategray;
+}
+
+.wrapper{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    width: 100%;
+    height: 80px;
+    background-color: black;
+    box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.5);
+}
+
+.brand{
+    display: flex;
+    flex-direction: row;
+    font-size: 2em;
+    padding: 15px;
+    text-transform: capitalize;
+}
+
+.firstname{
+    color: #fcd25b;
+    font-weight: 800;
+    
+}
+
+.lastname{
+    color: azure;
+    font-weight: 400;
+    padding-left: 3px;
+}
+
+.navigation{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+.navigation>li{
+    list-style-type: none;
+    padding: 15px;
+}
+
+.navigation>li>a{
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: capitalize;
+
+}
+
+.navigation>li:hover{
+    background-color: #fcd25b;
+    color: #fff;
+    transition: all .6s ease-out;
+}
+
+.eclipse{
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    animation: dayToNight 10s infinite 1.5s;
+}
+
+.content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    display: block;
+}
+
+.sun{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: #fcd25b;
+    border: 3px solid #fcd25b;
+}
+
+.shadow{
+    height: 170px;
+    width: 170px;
+    top: -50%;
+    left: 0%;
+    background-color: #fff;
+    border-radius: 50%;
+    animation:moveshadow 10s infinite 1.5s;
+}
+
+@keyframes moveshadow{
+    0% {
+        transform: translateX(150px);
+        background-color: #fff;
+    }
+
+    50% {
+        transform: translateX(-10px);
+        background-color: #000;
+    }
+
+    100% {
+        transform: translateX(-170px);
+        background-color: #fff;
+    }
+}
+
+
+@keyframes dayToNight {
+    0% {
+        background-color: #fff;
+    }
+    50% {
+        background-color: #000;
+    }
+    100% {
+        background-color: #fff;
+    }
+}
